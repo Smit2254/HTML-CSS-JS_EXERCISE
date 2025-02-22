@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+/* || RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* || VARIABLES */
+:root {
+  /* FONTS */
+  --FF: 'Heebo', sans-serif;
+
+  /* STANDARD PADDING */
+  --PADDING-TB: 27px;
+  --PADDING-SIDE: 60px;
+}
+
+/* || GENERAL STYLES */
+
+html {
+  font-family: var(--FF);
+}
+
+a:any-link {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  color: hsla(0, 0%, 0%, 0.6);
+}
+
+a:active {
+  color: orange;
+}
+
+span {
+  font-size: 20px;
+  color: #8695a4;
+}
+
+/* || HEADER */
+.header__nav {
+  padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+
+.header__ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: end;
+  gap: 25px;
+  font-weight: bolder;
+}
+
+.header__ul li:first-child a {
+  color: red;
+}
+
+.header__ul li:not(:first-child) a {
+  color: black;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background: #000;
+  margin: 5px 0;
+}
+
+/* || MAIN */
+.main {
+  padding: 0 235px;
+  color: #21243d;
+}
+
+.main__h1 {
+  font-size: 44px;
+  margin-top: 106px;
+  margin-bottom: 55px;
+}
+
+.main__grid1 {
+  width: 681px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 29px;
+  gap: 17px;
+}
+
+.grid__p1 {
+  font-size: 30px;
+}
+
+.grid__p2 {
+  font-size: 20px;
+}
+
+.grid__p3 {
+  font-size: 16px;
+}
+
+/* || FOOTER */
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+  padding-top: 134px;
+}
+
+.footer p {
+  font-size: 16px;
+  color: #21243d;
+  padding-bottom: 54px;
+}
+
+/* || RESPONSIVE */
+@media (max-width: 375px) {
+  span {
+    font-size: 16px;
+  }
+
+  hr {
+    width: 339px;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 20px 0;
+  }
+
+  .main {
+    padding: 0 18px;
+  }
+
+  .main__h1 {
+    font-size: 30px;
+    margin-top: 24px;
+    margin-bottom: 18px;
+  }
+
+  .main__grid1 {
+    width: 339px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+    gap: 17px;
+  }
+
+  .grid__p1 {
+    font-size: 26px;
+  }
+
+  .grid__p2 {
+    font-size: 16px;
+  }
+
+  .footer__container {
+    padding-top: 108px;
+  }
+
+  .footer p {
+    font-size: 14px;
+  }
+}
